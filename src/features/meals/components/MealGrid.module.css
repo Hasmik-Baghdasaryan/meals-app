@@ -1,0 +1,10 @@
+.item {
+  position: relative;
+}
+
+.favorite {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.2rem;
+  z-index: 1;
+}

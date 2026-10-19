@@ -3,7 +3,7 @@ import styles from "./Header.module.css";
 
 const links = [
   { to: "/", label: "Categories", end: true },
-  // { to: "/favorites", label: "Favorites" },
+  { to: "/favorites", label: "Favorites" },
 ];
 
 function Header() {

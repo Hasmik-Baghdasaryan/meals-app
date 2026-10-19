@@ -7,6 +7,7 @@ import HomePage from "@/pages/HomePage";
 import NotFoundPage from "@/pages/NotFoundPage";
 import RouteError from "@/pages/RouterError";
 import SearchPage from "@/pages/SearchPage";
+import FavoritesPage from "@/pages/FavoritesPage";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
           { path: "category/:name", element: <CategoryPage /> },
           { path: "category/:name/:id", element: <MealPage /> },
           { path: "search", element: <SearchPage /> },
+          { path: "favorites", element: <FavoritesPage /> },
           { path: "*", element: <NotFoundPage /> },
         ],
       },

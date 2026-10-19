@@ -1,3 +1,4 @@
+import FavoriteButton from "@/features/favorites/components/FavoriteButton";
 import Actions from "./Actions";
 
 import styles from "./MealInfo.module.css";
@@ -20,7 +21,10 @@ function MealInfo({ meal, children }) {
         </ul>
       )}
       <div className={styles.row}>
-        <Actions youtube={meal.youtube} source={meal.source} />
+        <div className={styles.actionsWrapper}>
+          <Actions youtube={meal.youtube} source={meal.source} />
+          <FavoriteButton meal={meal} />
+        </div>
         {children}
       </div>
     </div>
