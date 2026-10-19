@@ -1,0 +1,33 @@
+.ingredients {
+  padding: 0.5rem 1.5rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  background: var(--paper);
+}
+
+.sectionTitle {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.625rem;
+}
+
+.ingredientList {
+  list-style: none;
+}
+
+.ingredient {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.625rem 0;
+  border-bottom: 1px solid var(--line);
+  overflow-wrap: anywhere;
+}
+
+.ingredient:last-child {
+  border-bottom: 0;
+}
+
+.measure {
+  color: var(--muted);
+  text-align: right;
+}

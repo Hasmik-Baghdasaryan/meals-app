@@ -1,0 +1,42 @@
+.instructions {
+  min-width: 0;
+}
+
+.sectionTitle {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.625rem;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  list-style: none;
+}
+
+.stepWrapper {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.step {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--terracotta);
+  color: var(--sand);
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.text {
+  line-height: 1.5;
+  font-family: var(--font-display);
+  overflow-wrap: anywhere;
+}

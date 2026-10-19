@@ -1,0 +1,27 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4) 0;
+  text-align: center;
+}
+
+.code {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 18vw, 9rem);
+  font-weight: 500;
+  line-height: 1;
+  color: var(--sand);
+}
+
+.title {
+  color: var(--ink);
+}
+
+.text {
+  max-width: 45ch;
+  margin-bottom: var(--space-1);
+  color: var(--muted);
+  line-height: 1.6;
+}

@@ -1,0 +1,19 @@
+.link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  color: var(--ink);
+  text-decoration: none;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.link:hover {
+  transform: translateY(-3px);
+  border-color: var(--line-strong);
+}

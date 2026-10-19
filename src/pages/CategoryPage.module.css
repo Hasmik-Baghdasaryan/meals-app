@@ -1,0 +1,12 @@
+.title {
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.description {
+  max-width: 90%;
+  margin: var(--space-3) auto;
+  color: var(--muted);
+  line-height: 1.6;
+  text-align: center;
+}

@@ -1,0 +1,12 @@
+.title {
+  text-align: center;
+  margin: var(--space-3);
+}
+
+.text {
+  margin: var(--space-1);
+  text-align: center;
+  color: var(--terracotta-dark);
+  font-family: var(--font-display);
+  font-weight: 500;
+}

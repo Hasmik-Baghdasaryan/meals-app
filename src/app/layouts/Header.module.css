@@ -1,0 +1,102 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: color-mix(in srgb, var(--cream) 92%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 14px var(--space-3);
+  box-sizing: border-box;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--terracotta);
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: var(--terracotta-dark);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 14px;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 6px;
+  height: 2px;
+  background: var(--terracotta);
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+}
+
+.link:hover {
+  color: var(--terracotta);
+}
+
+.link:hover::after,
+.active::after {
+  transform: scaleX(1);
+}
+
+.active {
+  color: var(--terracotta);
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .inner {
+    padding: 10px var(--space-2);
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .link {
+    padding: 0 10px;
+  }
+
+  .link::after {
+    left: 10px;
+    right: 10px;
+  }
+}

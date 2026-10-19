@@ -1,0 +1,35 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding-bottom: 4rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: start;
+}
+
+.back {
+  align-self: flex-start;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.back:hover {
+  color: var(--terracotta-dark);
+  text-decoration: underline;
+}
+
+@media (max-width: 860px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .content > :nth-child(2) {
+    order: -1;
+  }
+}

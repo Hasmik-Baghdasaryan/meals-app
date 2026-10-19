@@ -1,0 +1,81 @@
+:root {
+  --cream: #fbf4e8;
+  --paper: #fffdf8;
+  --ink: #2b1d14;
+  --muted: #6b5547;
+  --line: #e8d9c2;
+  --line-strong: #d9c4a3;
+  --terracotta: #a63d24;
+  --terracotta-dark: #7e2c18;
+  --terracotta-soft: #fbece7;
+  --sand: #e9d5b5;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+
+  --radius-card: 14px;
+  --radius-lg: 18px;
+  --radius-pill: 999px;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --container: 1160px;
+
+  --gutter: clamp(1rem, 4vw, 1.5rem);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+}
+
+h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  line-height: 1.15;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+
+a {
+  color: var(--terracotta);
+}
+
+:focus-visible {
+  outline: 3px solid var(--terracotta);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
