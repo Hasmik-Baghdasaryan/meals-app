@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 import { fetchCategories } from "@/services/categoriesService";
-import type { CategoryRootState } from "@/types/category/types";
+import type { CategoryState } from "@/types/category/state";
 import type { RootState } from "@/store/store";
 
 export const getMealsCategories = createAsyncThunk(
@@ -9,13 +9,13 @@ export const getMealsCategories = createAsyncThunk(
   (_, { signal }) => fetchCategories(signal),
   {
     condition: (_, { getState }) => {
-      const { status } = (getState() as RootState).categories as CategoryRootState;
+      const { status } = (getState() as RootState).categories as CategoryState;
       return status !== "loading" && status !== "succeeded";
     },
   },
 );
 
-const initialState: CategoryRootState = {
+const initialState: CategoryState = {
   items: [],
   status: "idle",
   error: null,
