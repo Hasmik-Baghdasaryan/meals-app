@@ -1,6 +1,6 @@
-import type { MealBasics, MealDetails, RawMeal } from "@/types/meal";
+import type { MealBasics, MealDetails, RawMeal } from "@/types/meal/types";
 
-import { type ingredient } from "@/types/meal";
+import type { Ingredient } from "@/types/meal/types";
 
 const INGREDIENTS_COUNT = 20;
 
@@ -9,7 +9,7 @@ function cleanText(text: string) {
 }
 
 function parseMealIngredients(meal: RawMeal) {
-  const ingredients: ingredient[] = [];
+  const ingredients: Ingredient[] = [];
 
   for (let i = 1; i <= INGREDIENTS_COUNT; i++) {
     const name = meal[`strIngredient${i}`]?.trim();
@@ -29,9 +29,9 @@ export function normalizeMealBasics(meal: RawMeal): MealBasics {
   return {
     id: meal.idMeal,
     name: meal.strMeal,
-    thumb: meal.strMealThumb,
-    category: meal.strCategory,
-    area: meal.strCountry || meal.strArea,
+    thumb: meal.strMealThumb || "",
+    category: meal.strCategory || "",
+    area: meal.strCountry || meal.strArea || "",
   };
 }
 

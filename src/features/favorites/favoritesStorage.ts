@@ -1,4 +1,4 @@
-import type { FavoriteMeal } from "@/types/propTypes";
+import type { FavoriteMeal } from "@/types/favorite/types";
 
 const STORAGE_KEY = "cozy-kitchen:favorites";
 

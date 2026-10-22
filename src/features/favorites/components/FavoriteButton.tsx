@@ -1,11 +1,16 @@
-import { useDispatch, useSelector } from "react-redux";
-import { selectIsFavorite, toggleFavoriteAndSave } from "../favoritesSlice";
+import { useAppDispatch, useAppSelector } from "@/hooks/hooks";
+import {
+  selectIsFavorite,
+  toggleFavoriteAndSave,
+} from "@/store/favorites/favoriteSelectors";
+
+import type { FavoriteMeal } from "@/types/favorite/types";
 
 import styles from "./FavoriteButton.module.css";
 
-function FavoriteButton({ meal }) {
-  const dispatch = useDispatch();
-  const isFavorite = useSelector((state) => selectIsFavorite(state, meal.id));
+function FavoriteButton({ meal }: { meal: FavoriteMeal }) {
+  const dispatch = useAppDispatch();
+  const isFavorite = useAppSelector((state) => selectIsFavorite(state, meal.id));
 
   return (
     <button
